@@ -6,7 +6,7 @@ import { TextField } from '@mui/material';
 const App = () =>{
 
   const [number, setnumber] = useState(0)
-  const [output1, setoutput1] = useState(false)
+  const [output1, setoutput1] = useState("")
   const [output2, setoutput2] = useState(0)
 
   async function IsPrime()
@@ -14,12 +14,12 @@ const App = () =>{
     
     if (number===1)
     {
-      setoutput1(false);
+      setoutput1("false");
       setoutput2(number);
     }
     else if(number === 2)
     {
-      setoutput1(true);
+      setoutput1("true");
       setoutput2(number);
     }
     else
@@ -28,11 +28,11 @@ const App = () =>{
       {
         if(number % x === 0)
         {
-          setoutput1(false);
+          setoutput1("false");
           setoutput2(number);
         }
       }
-      setoutput1(true);
+      setoutput1("true");
       setoutput2(number);  
     }
   }
